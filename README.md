@@ -10,4 +10,6 @@ Este projeto utiliza a biblioteca iText7 (licença AGPL) para fazer as assinatur
 
  This project is using the iText7 library with AGPL license.
 
- 
+ ## Verificador de PDF
+
+ Para verificar se o PDF está assinado em conformidade ao DOC-ICP-15 utilize https://verificador.iti.gov.br/.
