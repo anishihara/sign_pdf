@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:sign_pdf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Assinar PDF" Height="190" Width="520" ResizeMode="NoResize">
     <Grid>
-        
+        <DockPanel HorizontalAlignment="Stretch"  Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <Label DockPanel.Dock="Top" x:Name="label" Content="1. Selecione o certificado:" VerticalAlignment="Top" Height="23" HorizontalContentAlignment="Left"/>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" HorizontalAlignment="Stretch"  Margin="25,0,25,0" VerticalAlignment="Stretch">
+                <TextBox x:Name="privateKeyPathTextBox" IsEnabled="False" TextWrapping="Wrap" Text="" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="23" Width="328" />
+                <Button x:Name="selectPrivateKeyButton" Width="135" Content="Selecionar certificado..." Click="selectPrivateKeyButton_Click" />
+            </StackPanel>
+            <Label Content="2. Digite a senha do certificado:" DockPanel.Dock="Top" VerticalAlignment="Top" Height="23"  HorizontalContentAlignment="Left"/>
+
+            <PasswordBox DockPanel.Dock="Top" x:Name="privateKeyPassword" Height="23" VerticalAlignment="Top" Margin="25,0,25,0" />
+            <Label Content="3. Selecione o PDF a ser assinado:" DockPanel.Dock="Top" VerticalAlignment="Top" Height="23"  HorizontalContentAlignment="Left"/>
+            <Button x:Name="selectPDFButton" DockPanel.Dock="Top" Margin="25,0,25,0" Height="23" VerticalAlignment="Top" Click="selectPDFButton_Click">Selecionar o PDF e assinar...</Button>
+         
+
+        </DockPanel>
     </Grid>
 </Window>
